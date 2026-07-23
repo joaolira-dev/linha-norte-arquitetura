@@ -83,6 +83,27 @@ function ArrowUpRight({ size = 16 }: { size?: number }) {
   );
 }
 
+function ArrowDownRight({ size = 16 }: { size?: number }) {
+  return (
+    <svg
+      className="arrow-down-right"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+    >
+      <path
+        d="M4 4 12 12M12 6v6H6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -178,7 +199,7 @@ export default function Home() {
             <p>Arquitetura e interiores com identidade, técnica e sensibilidade.</p>
             <a className="round-link" href="#contato">
               <span>Iniciar um<br />projeto</span>
-              <b aria-hidden="true">↘</b>
+              <ArrowDownRight />
             </a>
           </div>
         </div>
