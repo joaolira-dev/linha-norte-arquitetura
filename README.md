@@ -1,6 +1,6 @@
 # Linha Norte Arquitetura
 
-Landing page conceitual para um escritório fictício de arquitetura e interiores. O projeto combina direção de arte editorial, imagens arquitetônicas autorais e uma experiência responsiva voltada à apresentação de portfólio e à captação de novos projetos.
+Landing page conceitual para um escritório ficticio de arquitetura e interiores. O projeto combina direção de arte editorial, imagens arquitetônicas autorais e uma experiência responsiva voltada à apresentação de portfólio e à captação de novos projetos.
 
 ![Prévia da Linha Norte Arquitetura](./docs/preview.png)
 
