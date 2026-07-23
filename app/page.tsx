@@ -62,6 +62,27 @@ const faqs = [
   ["Atendem de forma online?", "Sim. Parte do processo pode acontecer online, inclusive para projetos em outras cidades. Visitas e levantamentos são combinados conforme cada caso."],
 ];
 
+function ArrowUpRight({ size = 16 }: { size?: number }) {
+  return (
+    <svg
+      className="arrow-up-right"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+    >
+      <path
+        d="M4 12 12 4M6 4h6v6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -134,7 +155,7 @@ export default function Home() {
           <a href="#servicos">Serviços</a>
           <a href="#contato">Contato</a>
         </nav>
-        <a className="header-cta" href="#contato">Fale com a gente <span>↗</span></a>
+        <a className="header-cta" href="#contato">Fale com a gente <ArrowUpRight /></a>
       </header>
 
       <section className="hero" id="inicio">
@@ -215,7 +236,7 @@ export default function Home() {
               <span>{number}</span>
               <h3>{title}</h3>
               <p>{description}</p>
-              <b aria-hidden="true">↗</b>
+              <ArrowUpRight size={20} />
             </article>
           ))}
         </div>
@@ -268,7 +289,7 @@ export default function Home() {
             <span>Conte brevemente sobre o projeto</span>
             <textarea name="mensagem" rows={3} placeholder="Local, metragem, momento atual e o que deseja transformar..." />
           </label>
-          <button type="submit">Enviar pelo WhatsApp <span>↗</span></button>
+          <button type="submit">Enviar pelo WhatsApp <ArrowUpRight /></button>
         </form>
       </section>
 
@@ -295,11 +316,11 @@ export default function Home() {
             <small>Arquitetura</small>
           </a>
           <p>Arquitetura que nasce da escuta,<br />do lugar e do tempo.</p>
-          <a className="footer-project" href="#contato">Vamos conversar <span>↗</span></a>
+          <a className="footer-project" href="#contato">Vamos conversar <ArrowUpRight /></a>
         </div>
         <div className="footer-bottom">
-          <div><span>Social</span><a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
-          <div><span>Contato</span><a href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">WhatsApp ↗</a><a href="mailto:contato@linhanorte.arq.br">contato@linhanorte.arq.br</a></div>
+          <div><span>Social</span><a className="inline-arrow-link" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a></div>
+          <div><span>Contato</span><a className="inline-arrow-link" href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={13} /></a><a href="mailto:contato@linhanorte.arq.br">contato@linhanorte.arq.br</a></div>
           <div><span>Estúdio</span><p>Rua do Horizonte, 128<br />Vila Madalena · São Paulo, SP</p></div>
           <p className="copyright">© 2026 Linha Norte<br />Escritório conceitual</p>
         </div>
